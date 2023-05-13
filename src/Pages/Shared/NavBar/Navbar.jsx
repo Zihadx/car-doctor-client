@@ -5,6 +5,7 @@ const Navbar = () => {
     <li><Link to='/'>Home</Link></li>
     <li><Link to='/about'>About</Link></li>
     <li><Link to='/services'>Services</Link></li>
+    <li className="font-bold"><Link to='/login'>Login</Link></li>
     </>
   return (
     <>
@@ -34,7 +35,7 @@ const Navbar = () => {
              {navItems}
             </ul>
           </div>
-          <Link to="/" className="btn btn-ghost normal-case text-xl">
+          <Link to="/" className="btn btn-ghost normal-case">
             <img src={logo} alt="" />
           </Link>
         </div>

@@ -4,7 +4,7 @@ import Navbar from '../Pages/Shared/NavBar/Navbar';
 
 const Main = () => {
     return (
-        <div className='space-y-8'>
+        <div className='space-y-5'>
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>
