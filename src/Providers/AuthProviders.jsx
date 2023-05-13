@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { createContext, useEffect, useState } from "react";
 import {
   createUserWithEmailAndPassword,
@@ -21,12 +20,13 @@ const AuthProviders = ({ children }) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
     
-  //problem here
+  //problem here  
 
-  const signIn = (email,password)=>{
+  const signIn = (email, password)=>{
     setLoading(true)
-    return signInWithEmailAndPassword(auth,email,password)
+    return signInWithEmailAndPassword(auth, email, password)
   }
+  console.log(signIn)
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -40,8 +40,8 @@ const AuthProviders = ({ children }) => {
     };
   }, []);
 
-  const authInfo = () => {
-    user, loading, createUser, signIn;
+  const authInfo = {
+    user, loading, createUser, signIn
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

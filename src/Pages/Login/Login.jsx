@@ -9,10 +9,10 @@ const Login = () => {
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(email, password);
+    // console.log(email, password);
 
     signIn(email, password)
-      .then(result => {
+      .then((result) => {
         const user = result.user;
         console.log(user);
       })
@@ -64,7 +64,7 @@ const Login = () => {
               </div>
             </form>
             <p className="my-4 text-center">
-              New to this{" "}
+              New to this? {" "}
               <Link to="/signup" className="font-bold text-[#ff3811]">
                 Sign up
               </Link>

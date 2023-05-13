@@ -5,7 +5,7 @@ import { AuthContext } from "../../Providers/AuthProviders";
 const SignUp = () => {
   const { createUser } = useContext(AuthContext);
 
-  const handleSignup = (event) => {
+  const handleSignUp = (event) => {
     event.preventDefault();
 
     const form = event.target;
@@ -14,8 +14,7 @@ const SignUp = () => {
     const password = form.password.value;
     console.log(name, email, password);
 
-    createUser(email, password)
-    .then((result) => {
+    createUser(email, password).then((result) => {
       const user = result.user;
       console.log(user);
     })
@@ -31,7 +30,7 @@ const SignUp = () => {
         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 md:ml-14">
           <div className="card-body">
             <h1 className="text-5xl font-bold text-center">Sign up</h1>
-            <form onSubmit={handleSignup}>
+            <form onSubmit={handleSignUp}>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Name</span>
@@ -79,7 +78,7 @@ const SignUp = () => {
               </div>
             </form>
             <p className="my-4 text-center">
-              Already have an account{" "}
+              Already have an account? {" "}
               <Link to="/login" className="font-bold text-[#ff3811]">
                 Login
               </Link>
